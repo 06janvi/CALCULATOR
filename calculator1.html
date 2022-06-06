@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+                .calci{
+            height:480px;
+            width:300px;
+            border:2px solid white;
+            background-color: black;
+            margin-left: 500px;
+            margin-top: 50px;
+        }
+        .btn{
+            height:40px;
+            width:65px;
+            margin-left: 5px;
+        }
+        .btn-clear{
+            height:40px;
+            width:65px;
+            background: #00F260;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        .input{
+            height:45px;
+            width:277px;
+            margin-top:-110px;
+            margin-left: 6px;
+            border: 0px solid white;
+            text-align: right;
+            
+        }
+        .subinput{
+            height:45px;
+            width:275px;
+            margin-top: 15px;
+            margin-left: 5px;
+            text-align: right;
+            
+            
+        }
+        .h{
+            height:420px;
+            width:300px;
+            border: 2px solid black;
+            margin-left: 850px;
+            margin-top:-450px;
+            background-color: black;
+            color:aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="calci">
+    
+
+        <input type="text"class="subinput"id="eqn" readonly>
+        <input type="text" name="display" value="0"class="input" id="input">
+        <br><br><br>
+        <input type="button"value="CH" class="btn-clear"onclick="clearHistory()">
+        <input type="button" value="CS" class="btn-clear"onclick="steph()">
+        <br><br>
+        <input type="button" value="7" class="btn"onclick="getval('7')">
+        <input type="button" value="8" class="btn"onclick="getval('8')">
+        <input type="button" value="9" class="btn"onclick="getval('9')">
+        <input type="button" value="*"class="btn" onclick="getval('*')">
+        <br><br>
+        <input type="button" value="4"class="btn" onclick="getval('4')">
+        <input type="button" value="5" class="btn"onclick="getval('5')">
+        <input type="button" value="6"class="btn" onclick="getval('6')">
+        <input type="button" value="-"class="btn" onclick="getval('-')">
+        <br><br>
+        <input type="button" value="1"class="btn" onclick="getval('1')">
+        <input type="button" value="2"class="btn" onclick="getval('2')">
+        <input type="button" value="3"class="btn" onclick="getval('3')">
+        <input type="button" value="+" class="btn"onclick="getval('+')">
+        <br><br>
+        <input type="button" value="%"class="btn" onclick="getval('%')">
+        <input type="button" value="0"class="btn" onclick="getval('0')">
+        <input type="button" value="." class="btn"onclick="getval('.')">
+        <input type="button" value="="class="btn" onclick="ans('=')">
+        <br><br>
+        <input type="button" value="/"class="btn" onclick="getval('/')">
+        <input type="button" value="C"class="btn-clear" onclick="del('C')">
+       <input type="reset"name="reset"class="btn-clear" onclick="clearinput()">
+    </div>
+    <div class="h">
+        <h2 style="color:aqua; text-align: center;">History</h2>
+        <div id="history">
+            </div>
+    </div>
+    <script src="js/Calculator.js"></script>
+</body>
+</html>
